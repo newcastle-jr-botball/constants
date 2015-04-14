@@ -29,7 +29,7 @@ Well, let's use an example. One thing that you'll be doing in almost every progr
 
 You'll notice that we are accessing the ports for the motor multiple times within the program with `motor(0, 100)` etc. There are two potential problems with this: readability and maintenance.
 
-READABILITY:  Readability is how easy is to read the code - whether you are the programmer, or someone else just looking at the code. If I didn't know that the right motor was plugged into port 0, then I would have to read through your code, trying to figure out line by line what happens. Eventually, I would be able to determine the motor, but not without having to take the time to read through your code carefully.
+READABILITY:  Readability is how easy it is to read the code - whether you are the programmer, or someone else just looking at the code. If I didn't know that the right motor was plugged into port 0, then I would have to read through your code, trying to figure out line by line what happens. Eventually, I would be able to determine the motor, but not without having to take the time to read through your code carefully.
 
 MAINTENANCE:  Maintenance in programming is how easy it is for us to go back to our program to make changes. If, for instance, we needed to change the port for the right motor from 0 to 1, then we would have to change every instance of the 0 referring to the port in our program to 1. That's fine for a 15 line program like above, but some of our programs will extend into hundreds if not thousands of lines of code. That would take quite a bit of time to change every instance - and if we make a mistake changing even one of the motor instances, then our program breaks. 
 
