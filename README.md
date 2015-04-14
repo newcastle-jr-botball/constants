@@ -29,11 +29,11 @@ Well, let's use an example. One thing that you'll be doing in almost every progr
 
 You'll notice that we are accessing the ports for the motor multiple times within the program with `motor(0, 100)` etc. There are two potential problems with this: readability and maintenance.
 
-READABILITY:  Readability is how easy is to to read the code - whether you are the programmer, or someone else just looking at the code. If I didn't know that the right motor was plugged into port 0, then I would have to read through your code, trying to figure out line by line what happens. Eventually, I would be able to determine the motor, but not without having to take the time to read through your code.
+READABILITY:  Readability is how easy is to read the code - whether you are the programmer, or someone else just looking at the code. If I didn't know that the right motor was plugged into port 0, then I would have to read through your code, trying to figure out line by line what happens. Eventually, I would be able to determine the motor, but not without having to take the time to read through your code carefully.
 
 MAINTENANCE:  Maintenance in programming is how easy it is for us to go back to our program to make changes. If, for instance, we needed to change the port for the right motor from 0 to 1, then we would have to change every instance of the 0 referring to the port in our program to 1. That's fine for a 15 line program like above, but some of our programs will extend into hundreds if not thousands of lines of code. That would take quite a bit of time to change every instance - and if we make a mistake changing even one of the motor instances, then our program breaks. 
 
-What we would like to do is create a variable that would hold the motor port for us and then can be referenced from within the program. However, the motor port will not change throughout the program. We don't accidentally want to change that variable, because our program would break. So, we create a __constant__ and our program will not compile if we attempt to change its value somewhere in the program - notifying us that something is wrong within the code. 
+What we would like to do is create a variable that would hold the motor port for us that can then be referenced from within the program. However, the motor port will not change throughout the program. We don't accidentally want to change that variable, because our program would break. So, we create a __constant__ and our program will not compile if we attempt to change its value somewhere in the program - notifying us that something is wrong within the code. 
 
 OK, so let's rewrite the program above to use constants.
 
@@ -59,7 +59,7 @@ OK, so let's rewrite the program above to use constants.
         return 0;
     }
 
-OK, do you see what has changed? We __defined__ a constant by writing `#define RIGHT_WHEEL 0`. So, anywhere we want to reference the port that the right motor is plugged into, we can just use `RIGHT_WHEEL` like we're doing in the `motor` functions. This is much easier for someone to understand that just happens to read through our code. It is also easier for us to change the port that the motor is plugged in to. If we want the right motor to be plugged into port 1, all we have to do is change one line:  just change `#define RIGHT_WHEEL 0` to `#define RIGHT_WHEEL 1` - and our program is instantly updated to work with that change.
+OK, do you see what has changed? We __defined__ a constant by writing `#define RIGHT_WHEEL 0`. So, anywhere we want to reference the port that the right motor is plugged into, we can just use `RIGHT_WHEEL` like we're doing in the `motor` functions. This is much easier for someone to understand that just happens to read through our code. It is also easier for us to change the port that the motor is plugged into. If we want the right motor to be plugged into port 1, all we have to do is change one line:  just change `#define RIGHT_WHEEL 0` to `#define RIGHT_WHEEL 1` - and our program is instantly updated to work with that change.
 
 
 *Note:*
