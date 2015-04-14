@@ -63,9 +63,9 @@ OK, do you see what has changed? We __defined__ a constant by writing `#define R
 
 We can do this with anything within our program that we want to be constant. For example:
 
-#define SPEED_SLOW 25
-#define SPEED_NORMAL 50
-#define SPEED_FAST 100  
+    #define SPEED_SLOW 25
+    #define SPEED_NORMAL 50
+    #define SPEED_FAST 100  
 
 Can you write some code that would use the constants from above to move your robot in a square?
 
