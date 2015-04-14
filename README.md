@@ -63,6 +63,7 @@ OK, do you see what has changed? We __defined__ a constant by writing `#define R
 
 We can do this with anything within our program that we want to be constant. For example:
 
+    #define SPEED_NONE 0
     #define SPEED_SLOW 25
     #define SPEED_NORMAL 50
     #define SPEED_FAST 100  
