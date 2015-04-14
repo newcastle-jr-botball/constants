@@ -61,6 +61,13 @@ OK, so let's rewrite the program above to use constants.
 
 OK, do you see what has changed? We __defined__ a constant by writing `#define RIGHT_WHEEL 0`. So, anywhere we want to reference the port that the right motor is plugged into, we can just use `RIGHT_WHEEL` like we're doing in the `motor` functions. This is much easier for someone to understand that just happens to read through our code. It is also easier for us to change the port that the motor is plugged into. If we want the right motor to be plugged into port 1, all we have to do is change one line:  just change `#define RIGHT_WHEEL 0` to `#define RIGHT_WHEEL 1` - and our program is instantly updated to work with that change.
 
+We can do this with anything within our program that we want to be constant. For example:
+
+#define SPEED_SLOW 25
+#define SPEED_NORMAL 50
+#define SPEED_FAST 100  
+
+Can you write some code that would use the constants from above to move your robot in a square?
 
 *Note:*
 
